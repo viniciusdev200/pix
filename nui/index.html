@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>PIX</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="./js/pix.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="pixContainer" style="display: none;">
+        <div class="logo">
+            <div class="itauLogo">
+                <img src="./images/itau_logo.png" />
+            </div>
+            <div class="pixLogo">
+                <img src="./images/pix_logo.png" />
+            </div>
+        </div>
+        <div class="pixContent">
+            <div class="valueBank">
+                <span>Saldo atual (Banco):</span>
+                <br />
+                <span class="valueBankPrice"></span>
+            </div>
+            <div class="pixSendKey">
+                <span>Chave PIX:</span>
+                <br />
+                <input type="text" name="sendKey" placeholder="Digite o PIX" />
+            </div>
+            <div class="amountValue">
+                <span>Valor:</span>
+                <br />
+                <input type="number" name="amountValue" placeholder="Digite o valor" />
+            </div>
+        </div>
+        <div class="pixFooter">
+            <button onclick="sendPix()">Enviar</button>
+            <button onclick="showGeneratePix()">Gerar chave PIX</button>
+            <button onclick="showPix()">Ver chave</button>
+        </div>
+        <div class="generatePix">
+            <div class="nameKey">
+                <span>Nome chave:</span>
+                <br />
+                <input type="text" name="sendNameKey" placeholder="Digite o nome da chave" />
+            </div>
+            <div class="pixKey">
+                <span>Chave:</span>
+                <br />
+                <input type="text" name="sendPixKey" placeholder="Digite a chave" />
+            </div>
+            <div class="ajustButtonModal">
+                <button onclick="savePix()">Salvar</button>
+            </div>
+        </div>
+        <div class="showPix">
+            <div class="pix">
+                <span>Chave:</span>
+                <br />
+                <span class="pixKeyValue"></span>
+            </div>
+            <div class="ajustButtonModal">
+                <button onclick="closeShowPix()">Fechar</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
